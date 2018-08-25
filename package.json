@@ -1,0 +1,11 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "jimmy starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jimmy Kuruvilla",
+  "license": "ISC"
+}
