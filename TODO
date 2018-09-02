@@ -1,0 +1,40 @@
+
+Todo:
+ ✔ build custom backend in express to handle yelp formatting @done(18-09-02 15:11)
+    https:api.yelp.comv3businessesc-and-c-mulch-and-more-genevareviews
+  ✔ pass through nginx to express @done(18-09-02 15:09)
+  ✔ create endpoint for json data of yelp stuff @done(18-09-02 15:09)
+  ☐ whitelist ips on endpoint so it doesn't get abused
+  ☐ call it from code on FE, and display it when readyclean up code- nginx
+
+ ☐ redesign
+  - include more what we do, how we can help
+  ☐ seo
+  - meta description
+  ☐ http2 delivery over nginx?
+  
+  ☐ restarting the whole thing on a new server quickly
+  - nginx config files go in repo, same for systemd service
+  - sites
+  - make ccmulch a starter
+  
+  
+  Nice to haves:
+  ☐ templating
+  ☐ service worker to load content when offline
+  ☐ cache busting!
+  ☐ module loader
+  ☐ docker for services
+  
+  Done:
+  ✔ google analytics @done(18-08-30 00:04)
+  ✔ build scripts @done(18-08-29 23:44)
+  ✔ deploy scripts @done(18-08-29 23:44)
+  ✔ bundler @done(18-08-29 23:44)
+  ✔ domain name @done(18-08-29 23:44)
+  ✔ dns @done(18-08-29 23:45)
+  ✔ nginx @done(18-08-29 23:44)
+  ✔ gzip @done(18-08-29 23:44)
+  ✔ https @done(18-08-29 23:44)
+  ✔ virtual hosts @done(18-08-29 23:44)
+  ✔ site design @done(18-08-29 23:44)
