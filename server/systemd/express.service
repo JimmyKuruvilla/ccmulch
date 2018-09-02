@@ -1,0 +1,9 @@
+[Unit]
+Description=Express service
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/usr/bin/node /home/ubuntu/ccmulch/server/server.js
+
+[Install]
+WantedBy=multi-user.target

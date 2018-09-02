@@ -1,32 +1,34 @@
 
 Todo:
- ✔ build custom backend in express to handle yelp formatting @done(18-09-02 15:11)
-    https:api.yelp.comv3businessesc-and-c-mulch-and-more-genevareviews
-  ✔ pass through nginx to express @done(18-09-02 15:09)
-  ✔ create endpoint for json data of yelp stuff @done(18-09-02 15:09)
-  ☐ whitelist ips on endpoint so it doesn't get abused
   ☐ call it from code on FE, and display it when readyclean up code- nginx
-
- ☐ redesign
+  ☐ whitelisting ip necessary? rate limited already. 
+  ☐ redesign
   - include more what we do, how we can help
   ☐ seo
   - meta description
   ☐ http2 delivery over nginx?
   
-  ☐ restarting the whole thing on a new server quickly
-  - nginx config files go in repo, same for systemd service
-  - sites
-  - make ccmulch a starter
-  
   
   Nice to haves:
   ☐ templating
   ☐ service worker to load content when offline
-  ☐ cache busting!
+  ☐ cache busting?
   ☐ module loader
   ☐ docker for services
   
+  Install:
+  ☐ write a script to automate this once you've got more than 1
+  ☐ clone repo
+  ☐ copy service file to /etc/systemd/system, enable to run on boot. 
+  ☐ /etc/environment, set YELP_API_KEY and NODE_ENV
+  ☐ symlink sites-enabled conf to sites-available
+
   Done:
+  ✔ rate limit endpoint @done(18-09-02 16:37)
+  ✔ build custom backend in express to handle yelp formatting @done(18-09-02 15:11)
+  ✔ pass through nginx to express @done(18-09-02 15:09)
+  ✔ create endpoint for json data of yelp stuff @done(18-09-02 15:09)
+  ✔ restarting the whole thing on a new server quickly @done(18-09-02 16:20)
   ✔ google analytics @done(18-08-30 00:04)
   ✔ build scripts @done(18-08-29 23:44)
   ✔ deploy scripts @done(18-08-29 23:44)
