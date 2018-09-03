@@ -20,8 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/es6-shim": "~0.31.37",
+    "@types/handlebars": "~4.0.39",
     "concurrently": "~4.0.0",
-    "es6-shim": "~0.35.3",
     "http-server": "~0.11.1",
     "materialize-css": "~1.0.0-rc.2",
     "node-sass": "~4.9.3",
@@ -34,5 +34,8 @@
     "typescript": "~3.0.1",
     "uglify-js": "~3.4.8",
     "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "es6-shim": "~0.35.3"
   }
 }
