@@ -1,111 +1,140 @@
-
 @import 'material-icons';
+
 %transparent-bg {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
 
-body {
-  .mobile-overflow-wrapper {
-    color: white;
-    overflow-x: hidden;
-    background-image: url("img/gardenBg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    .section {
-      padding: 0;
-    }
-    .container {
-      @extend %transparent-bg;
-      margin-top: 20px;
-      padding-bottom: 20px;
-      width: 50%;
-      @media (max-width: 1000px) {
-        width: 80%;
-      }
-    }
-    .logo {
-      width: 80px;
-      height: 80px;
-      padding: 10px;
-      font-size: 20px;
-      left: 0;
-      top: 0;
+html {
+  height: 100vh;
+
+  body {
+    height: 100%;
+
+    .mobile-overflow-wrapper {
+      height: 100%;
+      color: white;
+      overflow-x: hidden;
+      background-image: url("img/gardenBg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
       position: relative;
-      @extend %transparent-bg;
-    }
-    .corner.phone-number {
-      $width: 220px;
-      $height: 80px;
-      width: $width;
-      height: $height;
-      padding: 10px;
-      font-size: 20px;
-      right: -($width - $height);
-      top: 0;
-      position: absolute;
-      transition: right 300ms;
-      .icon {
-        font-size: 50px;
-        margin: 5px 0 0 5px;
+
+      .section {
+        padding: 0;
       }
-      @extend %transparent-bg;
-      .number {
-        display: none;
-        margin-left: 10px;
+
+      .container {
+        @extend %transparent-bg;
+        padding-bottom: 20px;
+        width: 50%;
+        height: 90%;
+        overflow-y: auto;
+
+        @media (max-width: 1000px) {
+          width: 80%;
+        }
       }
-      &:hover {
-        right: 0px;
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        font-size: 20px;
+        left: 0;
+        top: 0;
+        position: relative;
+        @extend %transparent-bg;
+      }
+
+      .corner.phone-number {
+        $width: 220px;
+        $height: 80px;
+        width: $width;
+        height: $height;
+        padding: 10px;
+        font-size: 20px;
+        right: -($width - $height);
+        top: 0;
+        position: absolute;
+        transition: right 300ms;
+
+        .icon {
+          font-size: 50px;
+          margin: 5px 0 0 5px;
+        }
+
+        @extend %transparent-bg;
+
         .number {
-          display: inline-block;
-          margin: 15px 5px;
+          display: none;
+          margin-left: 10px;
         }
-      }
-    }
-    .company {
-      .company-info {
-        .company-blurb {
-          padding: 0px 10px;
-        }
-        .services {
-          padding: 0px 10px;
-          ul li {
-            list-style-type: circle;
-            list-style-position: inside;
-            text-indent: -2em;
-            padding-left: 2em;
+
+        &:hover {
+          right: 0px;
+
+          .number {
+            display: inline-block;
+            margin: 15px 5px;
           }
         }
       }
-    }
-    .reviews {
-      a.link {
-        color: white;
-      }
-      .review {
-        cursor: pointer;
-        padding: 0px 10px;
-        .review-blurb {}
-        .review-author {
-          margin-left: auto;
-          width: 150px;
+
+      .company {
+        .company-info {
+          .company-blurb {
+            padding: 0px 10px;
+          }
+
+          .services {
+            padding: 0px 10px;
+
+            ul li {
+              list-style-type: circle;
+              list-style-position: inside;
+              text-indent: -2em;
+              padding-left: 2em;
+            }
+          }
         }
       }
-      .leave-review.btn {
-        margin-top: 20px;
-        @media (max-width: 1000px) {
-          display:block;
+
+      .reviews {
+        a.link {
+          color: white;
+        }
+
+        .review {
+          cursor: pointer;
+          padding: 0px 10px;
+
+          .review-blurb {}
+
+          .review-author {
+            margin-left: auto;
+            width: 150px;
+          }
+        }
+
+        .leave-review.btn {
+          margin-top: 20px;
+
+          @media (max-width: 1000px) {
+            display: block;
+          }
         }
       }
+
+      .carousel-item {
+        width: 300px !important;
+      }
     }
-    .carousel-item {
-      width: 300px !important;
+
+    .pic-credit {
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
-}
-
-.pic-credit {
-  margin-left: auto;
-  width: 153px;
 }
