@@ -1,8 +1,19 @@
 @import 'material-icons';
+$darklight: rgba(14, 52, 29, 0.6);
+$highlight: #68e08d;
 
 %transparent-bg {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+%left-highlight {
+  &:hover {
+    border-left: 10px solid $highlight;
+    border-radius: 5px;
+    padding-left: 10px;
+    transition: border, padding 400ms, 400ms;
+  }
 }
 
 html {
@@ -36,49 +47,34 @@ html {
         }
       }
 
-      .logo {
-        width: 80px;
-        height: 80px;
-        padding: 10px;
-        font-size: 20px;
-        left: 0;
-        top: 0;
-        position: relative;
+      .container-header {
+        display: flex;
         @extend %transparent-bg;
-      }
+        @extend %left-highlight;
 
-      .corner.phone-number {
-        $width: 220px;
-        $height: 80px;
-        width: $width;
-        height: $height;
-        padding: 10px;
-        font-size: 20px;
-        right: -($width - $height);
-        top: 0;
-        position: absolute;
-        transition: right 300ms;
-
-        .icon {
-          font-size: 50px;
-          margin: 5px 0 0 5px;
+        .logo {
+          width: 80px;
+          height: 80px;
+          padding: 10px;
+          font-size: 20px;
         }
 
-        @extend %transparent-bg;
+        .phone-number {
+          flex: 1;
+          justify-content: flex-end;
+          padding: 10px;
+          font-size: 20px;
 
-        .number {
-          display: none;
-          margin-left: 10px;
-        }
-
-        &:hover {
-          right: 0px;
-
-          .number {
-            display: inline-block;
-            margin: 15px 5px;
+          .icon {
+            font-size: 50px;
+            margin: 5px 0 0 5px;
           }
         }
+      }
+
+      .section {
+        border-left: 10px solid transparent;
+        @extend %left-highlight;
       }
 
       .company {
@@ -107,13 +103,27 @@ html {
 
         .review {
           cursor: pointer;
-          padding: 0px 10px;
+          padding: 20px 10px;
 
-          .review-blurb {}
+          .review-details {
+            display: flex;
 
-          .review-author {
-            margin-left: auto;
-            width: 150px;
+            .review-author-img {
+              height: 10em;
+              width: 10em;
+              flex: 1 1 10%;
+              border-radius: 20%;
+              padding: 10px;
+            }
+
+            .review-blurb {
+              flex: 1 1 50%;
+            }
+          }
+
+          .stars,
+          .review-author-details {
+            margin-left: 35px;
           }
         }
 

@@ -26,13 +26,22 @@ export class YelpService {
           <div class="stars">
           ${stars(review.rating)}
           </div>
-          <div class="review-blurb">
-          ${review.text}
+          <div class="review-details">
+            <a href="${review.url}" target="_blank" 
+            <img class="review-author-img" src="${review.user.image_url}">
+            </a>
+            <div class="review-blurb">
+              ${review.text}
+            </div>
           </div>
-          <div class="review-author">
-          ${review.user.name} , ${review.time_created}
-          </div>
+          <div class="review-author-details">
+              ${review.user.name}, ${new Date(
+      review.time_created
+    ).toLocaleDateString()}
+            </div>
         </div>`;
     return reviewTemplate;
   }
 }
+
+//broke hte image display

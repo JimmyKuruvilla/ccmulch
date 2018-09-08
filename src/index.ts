@@ -17,12 +17,9 @@ function init() {
   yelp
     .getYelpReviews(domain, businessName)
     .then(reviewResp => {
-      // image_url
-      // time_created: date of review
-      // url to link to
       reviewResp.reviews.forEach(review => {
         document
-          .getElementById('review-heading')
+          .getElementById('review-block')
           .insertAdjacentHTML('afterend', yelp.reviewTemplateFn(review));
       });
     })
