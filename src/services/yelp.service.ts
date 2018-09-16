@@ -22,24 +22,32 @@ export class YelpService {
     };
 
     const reviewTemplate = `
-        <div class="review">
-          <div class="stars">
-          ${stars(review.rating)}
-          </div>
-          <div class="review-details">
-            <a href="${review.url}" target="_blank" 
-            <img class="review-author-img" src="${review.user.image_url}">
-            </a>
+      <div class="review">
+
+        <div class="review-details">
+          <a href="${review.url}" target="_blank">
+
+            <div class="review-author-details">
+              <div class="stars">
+                ${stars(review.rating)}
+              </div>
+              
+              <img src="${review.user.image_url}">
+
+              <div class="name">
+                <div> ${review.user.name}</div>
+                <div>${new Date(review.time_created).toLocaleDateString()}</div>
+              </div>
+            </div>
+
             <div class="review-blurb">
               ${review.text}
             </div>
-          </div>
-          <div class="review-author-details">
-              ${review.user.name}, ${new Date(
-      review.time_created
-    ).toLocaleDateString()}
-            </div>
-        </div>`;
+
+          </a>
+        </div>
+
+      </div>`;
     return reviewTemplate;
   }
 }

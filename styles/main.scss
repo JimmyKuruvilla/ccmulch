@@ -1,4 +1,5 @@
 @import 'material-icons';
+@import './reset';
 $darklight: rgba(14, 52, 29, 0.6);
 $highlight: #68e08d;
 
@@ -33,13 +34,16 @@ html {
 
       .section {
         padding: 0;
+        .section-title{
+          margin-bottom: 10px;
+        }
       }
 
       .container {
         @extend %transparent-bg;
         padding-bottom: 20px;
         width: 50%;
-        height: 90%;
+        height: 100vh;
         overflow-y: auto;
 
         @media (max-width: 1000px) {
@@ -97,8 +101,12 @@ html {
       }
 
       .reviews {
-        a.link {
-          color: white;
+        #review-block {
+          display: flex;
+
+          .leave-review.btn {
+            margin-left: auto;
+          }
         }
 
         .review {
@@ -106,32 +114,32 @@ html {
           padding: 20px 10px;
 
           .review-details {
-            display: flex;
 
-            .review-author-img {
-              height: 10em;
-              width: 10em;
-              flex: 1 1 10%;
-              border-radius: 20%;
-              padding: 10px;
+            a {
+              display: flex;
+
+              .review-author-details {
+                img {
+                  height: 10em;
+                  width: 10em;
+                  flex: 1 1 10%;
+                  border-radius: 20%;
+                  padding: 10px;
+                }
+
+                .stars,
+                .name {
+                  text-align: center;
+                }
+              }
             }
+
+
 
             .review-blurb {
-              flex: 1 1 50%;
+              display: flex;
+              align-self: center;
             }
-          }
-
-          .stars,
-          .review-author-details {
-            margin-left: 35px;
-          }
-        }
-
-        .leave-review.btn {
-          margin-top: 20px;
-
-          @media (max-width: 1000px) {
-            display: block;
           }
         }
       }
